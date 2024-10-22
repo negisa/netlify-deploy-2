@@ -1,0 +1,229 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+.chatpdf {
+  display: flex;
+  height: 100vh;
+  flex-direction: row;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.chatpdf .pannel {
+  width: 250px;
+  background-color: #003366;
+  color: #fff;
+  padding: 10px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatpdf .pannel header {
+  padding-bottom: 80px;
+}
+
+.chatpdf .pannel button {
+  background-color: #00509e;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.chatpdf .pannel button:hover {
+  background-color: #007acc;
+}
+
+.chatpdfBox {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: linear-gradient(to bottom right, #dbe6fb, #f3f4f8);
+  padding: 10px;
+  align-items: flex-start;
+}
+
+.chatpdfLine {
+  flex: 1;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  overflow-y: auto;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatpdfRow {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  /* 默认对齐方式为左对齐 */
+}
+
+.chatpdfRow.user {
+  justify-content: flex-end;
+  /* 用户消息右对齐 */
+}
+
+.chatpdfContent,
+.chatpdfAiContent {
+  border-radius: 8px;
+  /* 圆角 */
+  padding: 8px 12px;
+  /* 内边距 */
+  max-width: 80%;
+  /* 最大宽度 */
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.12), 0px 1.6px 3.6px rgba(0, 0, 0, 0.16);
+  /* 阴影效果 */
+  word-wrap: break-word;
+  /* 自动换行 */
+}
+
+.chatpdfContent {
+  background: rgba(255, 255, 255, 0.8);
+  /* 用户消息背景 */
+}
+
+.chatpdfAiContent {
+  background: linear-gradient(90deg, #1B4AEF 10.79%, #2870EA 87.08%);
+  /* AI消息的渐变背景 */
+  color: #fff;
+  /* 字体颜色 */
+}
+
+.chatpdfArea {
+  display: flex;
+  padding: 10px;
+  max-width: 1000px;
+  margin: 10px auto;
+  align-items: center;
+  width: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.chatpdfArea textarea {
+  flex: 1;
+  border: 1px solid #d9d9d9;
+  resize: none;
+  outline: none;
+  padding: 10px;
+  height: 50px;
+  line-height: 20px;
+  color: #404040;
+  border-radius: 10px 0 0 10px;
+  transition: border-color 0.3s;
+}
+
+.chatpdfArea textarea:hover {
+  border-color: #4096ff;
+}
+
+.chatpdfArea button {
+  height: 70px;
+  color: #fff;
+  background: linear-gradient(90deg, #2870EA 10.79%, #1B4AEF 87.08%);
+  border: none;
+  padding: 0 20px;
+  border-radius: 0 8px 8px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#deleteBtn {
+  margin-left: 5px;
+  border-radius: 4px;
+}
+
+.chatpdfArea button:hover {
+  background-color: #388aff;
+}
+
+.sessionList {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sessionItem {
+  background-color: #00509e;
+  color: #fff;
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sessionItem:hover {
+  background-color: #007acc;
+}
+
+/* 新增选中状态的样式 */
+.sessionItem.selected {
+  border: 2px solid white;
+}
+
+.settings {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.settings label {
+  margin: 5px 0;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .pannel {
+    display: none;
+  }
+}
+
+/* 实现打字机效果 */
+.chatpdfRow {
+  margin: 10px 0;
+  display: flex;
+  justify-content: flex-start;
+  /* 默认对齐方式为左对齐 */
+}
+
+.chatpdfRow.user {
+  justify-content: flex-end;
+  /* 用户消息右对齐 */
+}
+
+.chatpdfContent,
+.chatpdfAiContent {
+  border-radius: 8px;
+  /* 圆角 */
+  padding: 8px 12px;
+  /* 内边距 */
+  max-width: 80%;
+  /* 最大宽度 */
+  box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 0.12), 0px 1.6px 3.6px rgba(0, 0, 0, 0.16);
+  /* 阴影效果 */
+  word-wrap: break-word;
+  /* 自动换行 */
+}
+
+.chatpdfContent {
+  background: rgba(255, 255, 255, 0.8);
+  /* 用户消息背景 */
+}
+
+.chatpdfAiContent {
+  background: linear-gradient(90deg, #1B4AEF 10.79%, #2870EA 87.08%);
+  /* AI消息的渐变背景 */
+  color: #fff;
+  /* 字体颜色 */
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="chatpdf">
+
+    <div class="pannel">
+      <header>
+        <h1 id="pageTitle">智能Ai对话JoTangLM</h1>
+      </header>
+      <div class="session   List" id="sessionList"></div>
+      <button id="newSessionBtn">新建会话</button>
+    </div>
+    <div class="chatpdfBox">
+      <div class="chatpdfLine" id="chatArea">
+        <div class="chatpdfRow">
+          <div class="chatpdfContent">欢迎使用AI对话，请输入您的问题。</div>
+        </div>
+      </div>
+      <div class="chatpdfArea">
+        <textarea id="userInput" placeholder="输入您的消息..."></textarea>
+        <button id="sendBtn">发送</button>
+        <button id="deleteBtn">删除当前对话</button> <!-- 添加删除对话按钮 -->
+      </div>
+      <div class="settings">
+        <label for="colorPicker">选择侧边栏配色:</label>
+
+        <input type="color" id="colorPicker" value="#dbe6fb">
+        <button id="toggleColorBtn">切换配色</button>
+        <label for="responseLength">AI回答长度:</label>
+        <select id="responseLength">
+          <option value="short">短</option>
+          <option value="medium" selected>中</option>
+          <option value="long">长</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+<!-- 出现bug，ai回复时会出现两个文本 -->
+<!-- 可能因为调用太多次 -->
+<!-- 出现bug，新建的第一个对话中的聊天记录会保存到第二第三个对话里面 -->
+<!-- 解决方法，这个问题可能是由于在新建会话时没有正确初始化会话数据导致的。我们需要确保每次新建会话时，会话数据都是独立的，并且在切换会话时正确加载和保存数据。 -->
+
+</html>
